@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http:www.springfreamework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+       "
+        >
+   
+    <!-- bean definitions here -->
+    <context:annotation-config />
+    <context:component-scan base-package="com.xyz"/>
+    <bean class  = "springdemo.yogesh.AutoWire.Annotation.Address" name ="address">
+		<property name="street" value="Ring road"/>
+		<property name="city" value="Nagpur"/>
+		
+	</bean>	
+	<bean class  = "springdemo.yogesh.AutoWire.Annotation.Address" name ="add">
+		<property name="street" value="Ring road"/>
+		<property name="city" value="Nagpur"/>
+		
+	</bean>	
+
+	 <bean class  = "springdemo.yogesh.AutoWire.Annotation.Emp" name ="emp"/>	
+	<!-- In the byName method reference object name should be same
+	but in the byType method class name matches with the bean -->
+</beans>
